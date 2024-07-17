@@ -5,6 +5,52 @@
 <script>
   // Moved to -->
 </script>
+ <div id="tester" style="width:600px;height:400px;"></div>
+  <script>
+    var trace1 = {
+      x: ['blue470',
+          'cyan525',
+          'green560',
+          'yellow585',
+          'orange600',
+          'red645',
+          'deepred700',
+          'IR1735',
+          'IR12810',
+          'IR3880',
+          'IR4940'],
+      y: ['26.55%',
+          '13.74%',
+          '15.41%',
+          '15.45%',
+          '16.49%',
+          '37.88%',
+          '61.39%',
+          '62.40%',
+          '90.15%',
+          '98.34%',
+          '101.97%'],
+      type: 'bar'
+    };
 
+    var data = [trace1];
+
+    var layout = {
+        title: 'Reflectance',
+        width: 570,
+        height: 430,
+        autosize: false,
+        xaxis: {
+            title: 'Wavelength (nm)'
+        },
+        yaxis: {
+            title: 'Reflectance (%)',
+            automargin: true
+        },
+        margin: { l: 0 }, // Adjust the top margin (you can also set l, r, and b for left, right, and bottom margins)
+    };
+
+    Plotly.newPlot('tester', data, layout);
+  </script>
 <script src="webpage.js"></script>
 <link rel="stylesheet" href="webpage.css">
