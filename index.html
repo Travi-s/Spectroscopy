@@ -1,10 +1,61 @@
-<script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+<!DOCTYPE html>
+<html>
 
-<!--this div will be replaced in JS with the graph-->
-<div id="tester" style="width:800px;height:250px;"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+  Hello World
+  <br>
+  <br>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<button id="myButton">
+  This Is A Button
+</button>
 <script>
-  // Moved to -->
+  const myButton = document.getElementById('myButton');
+  myButton.addEventListener('click', () => {
+    alert("Redirecting...");
+  });
+</script>
+<br>
+<br>
+
+
+
+<div id="tester1" style="width:550px;height:350px;"></div>
+<script>
+  TESTER = document.getElementById('tester1');
+  Plotly.newPlot(TESTER, [{
+    x: [470,525,560,585,600,645,700,735,810,880,940],
+    y: [9.577922078,8.873239437,12.67409471,31.18741059,
+      47.73722628,74.13533835,87.82343988,88.0910683,
+      97.6340694,103.2258065,105.8479532], type: 'line'
+  }], {
+    margin: {t: 0}
+  });
 </script>
 
-<script src="webpage.js"></script>
-<link rel="stylesheet" href="webpage.css">
+
+
+<div id="tester2" style="width:550px;height:350px;"></div>
+<script>
+  TESTER = document.getElementById('tester2');
+  Plotly.newPlot(TESTER, [{
+    x: [470,525,560,585,600,645,700,735,810,880,940],
+    y: [22.88961039,27.18309859,21.7270195,12.1602289,
+      10.80291971,16.9924812,27.09284627,22.41681261,
+      57.0977918,85.64516129,94.73684211], type: 'bar'
+  }], {
+    margin: {t: 0}
+  });
+</script>
